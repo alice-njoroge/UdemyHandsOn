@@ -3,9 +3,12 @@
 {% block body %}
     <div>
         <h1>Index page</h1>
-        {% for message in messages %}
-            <li>{{ message }}</li>
-        {% endfor %}
-
+        {% if messages|length > 0 %}
+            {% for message in messages|slice(0, limit) %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        {% else %}
+            <b>Oops there is no messages yet!</b>
+        {% endif %}
     </div>
 {% endblock %}
