@@ -3,6 +3,9 @@
 {% block body %}
     <div>
         <h1>Index page</h1>
-        <b>{{ messages }}</b>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+
     </div>
 {% endblock %}
