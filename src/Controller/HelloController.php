@@ -12,9 +12,9 @@ use Symfony\Component\Routing\Requirement\Requirement;
 class HelloController extends AbstractController
 {
     private array $messages = [
-        'mangoes',
-        'bananas',
-        'raspberries',
+        ['title'=>'Hallo', 'created'=>'2023/06/12'],
+        ['title'=>'Guten Tag', 'created'=>'2023/07/12'],
+        ['title'=>'Guten Abend', 'created'=>'2021/07/12'],
     ];
 
     #[Route('/{limit?3}', name: 'app_index')]
